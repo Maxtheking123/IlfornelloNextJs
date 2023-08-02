@@ -22,7 +22,7 @@ export default function App() {
   <div class="container">
     <div class="row">
       <div class="content">
-        <video class="image" autoplay preload="auto" loop muted>
+        <video class="image" autoplay controls loop muted>
           <source src="TheCaveImages/TheCaveVideo.mp4" type="video/mp4"></source>
           Your browser does not support the video tag.
         </video>
