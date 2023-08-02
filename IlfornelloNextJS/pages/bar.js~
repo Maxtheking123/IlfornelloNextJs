@@ -1,0 +1,70 @@
+import Image from 'next/image';
+import { useState, useEffect } from 'react'
+ 
+export default function App() {
+  const [isClient, setIsClient] = useState(false)
+ 
+  useEffect(() => {
+    setIsClient(true)
+  }, [])
+ 
+  const Bar = () => {
+  return (
+    <html>
+      <body>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
+        <div class="HeadlineContainer">
+          <div class="home-button-container">
+            <div class="home-button" onclick="window.location = '/'">
+              <div class="HomeIcon"></div>
+            </div>
+          </div>
+          <span class="Headline">The Bar</span>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="content">
+              <video class="image" autoPlay loop muted>
+                <source src="BarImages/BarVideo.mp4" type="video/mp4"></source>
+                Your browser does not support the video tag.
+              </video>
+              <div class="description">
+                <p>The Ilfornello Bar area exists as a place to work, socialize, and relax while enjoying cold drinks.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="content">
+          <Image loading="lazy" class="image" id="BarImg" src="/BarImages/BarImage2.JPG" width={600} height={400} alt="Image 2"></Image>
+              <div class="description">
+                <p>The Bar is supplied with glasses and seats but everything else is brought by the guests.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="content">
+              <Image class="image" id="FridgeImg" width={600} height={400} src="/BarImages/BarImage3.JPG" alt="Image 2"></Image>
+              <div class="description">
+                <p>The Bar has a mini fridge that residents can stock with drinks of their choosing.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="content">
+              <Image class="image" src="/BarImages/BarImage1.JPG" width={600} height={400} alt="Image 2"></Image>
+              <div class="description">
+                <p>The Bar area also has plenty of seats, everything from bar stools, to chairs and even a swing and a hanging hammock chair.</p>
+                <p>It's a great place to not only sit and drink but is also a great place to work.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </body>
+    </html>
+  );
+};
+
+}

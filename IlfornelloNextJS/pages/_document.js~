@@ -1,0 +1,22 @@
+import React from 'react';
+import Head from 'next/head';
+import '../public/styles/global.css'; // Import global.css
+
+function MyApp({ Component, pageProps, router }) {
+  // Check if the current page's path is '/'
+  const isHomePage = router.pathname === '/';
+
+  // Import and apply different CSS based on the page's path
+  const pageCss = isHomePage ? '../public/styles/index.css' : null;
+
+  return (
+    <>
+      <Head>
+        {pageCss && <link rel="stylesheet" href={pageCss} />}
+      </Head>
+      <Component {...pageProps} />
+    </>
+  );
+}
+
+export default MyApp;

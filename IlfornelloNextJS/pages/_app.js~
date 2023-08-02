@@ -1,0 +1,30 @@
+// pages/_app.js
+import '../styles/global.css'; // This will be applied on all pages except index
+import { useEffect } from 'react';
+
+function MyApp({ Component, pageProps }) {
+  useEffect(() => {
+    // Check if the current page is 'index'
+    const isIndexPage = window.location.pathname === '/';
+
+    if (isIndexPage) {
+      // Load the 'index.css' file dynamically
+      const indexCSSLink = document.createElement('link');
+      indexCSSLink.href = '/index.css';
+      indexCSSLink.rel = 'stylesheet';
+      document.head.appendChild(indexCSSLink);
+
+      // Remove the 'index.css' file when the component is unmounted
+      return () => {
+        document.head.removeChild(indexCSSLink);
+      };
+    }
+  }, []);
+
+  // Use getLayout function to define the custom layout for pages
+  const getLayout = Component.getLayout || ((page) => page);
+
+  return getLayout(<Component {...pageProps} />);
+}
+
+export default MyApp;

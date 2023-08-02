@@ -1,0 +1,174 @@
+body {
+      font-family: Arial, sans-serif;
+      background: #fff8ef;
+      margin: 0;
+      padding: 0;
+    }
+
+    .row:nth-child(odd) .content {
+      flex-direction: row;
+    }
+
+    .row:nth-child(even) .content {
+      flex-direction: row-reverse;
+    }
+
+    .row:nth-child(even) .content .description {
+        margin-left: 0;
+        margin-right: 8vw;
+    }
+
+    p{
+      margin: 0;
+      margin-top: 3vh;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin: 2vh 0 10px;
+    }
+
+    .content {
+      display: flex;
+      align-items: flex-start;
+      padding: 10px;
+    }
+
+    .image {
+      border-radius: 3vw;
+      box-shadow: 0 0 10px rgba(0,0,0,.2);
+      margin-right: 10px;
+      width: 40vw;
+      height: 60vw;
+      object-fit: cover;
+    }
+
+    .description {
+      flex: 1;
+        width: 40vw;
+        margin-left: 8vw;
+      font-size: 3.5vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    font-family: "roboto", sans-serif;
+    font-weight: 100;
+    }
+
+    .home-button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 11vw;
+      height: 11vw;
+      border-radius: 1.5vw;
+      font-size: 4vw;
+      font-family: "roboto",sans-serif;
+      font-weight: 200;
+      cursor: pointer;
+      transition: transform .25s;
+    }
+
+    .home-button:hover {
+        transform: scale(1.05);
+    }
+
+    .HomeIcon {
+      background-image: url(https://uxwing.com/wp-content/themes/uxwing/download/buildings-architecture-real-estate/home-icon.svg);
+    width: 70%;
+    height: 70%;
+    margin: auto;
+    background-repeat: no-repeat;
+}
+
+    .home-button-container{
+      display: flex;
+        justify-content: flex-start;
+          width: 20vw;
+    }
+
+    .HeadlineContainer{
+      display: flex;
+        justify-content: flex-start;
+    }
+
+    .Headline {
+      width: 60vw;
+      height: 12vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 6vw;
+      font-family: "roboto", sans-serif;
+      font-weight: 100;
+    }
+
+    #BarImg {
+        object-position: -11vh;
+    }
+
+    #FridgeImg {
+        object-position: -11vh;
+    }
+
+    #PoolImg {
+        object-position: -18vh;
+    }
+
+    #PoolShower{
+        object-position: -17vh;
+    }
+    #PoolHouse{
+        object-position: -17vh;
+        }
+    #ProjectorPoolArea {
+        object-position: -14vh;
+    }
+
+    @media (orientation: landscape) {
+      .description {
+        width: 28vw;
+      font-size: 2.3vw;
+      }
+
+        #BarImg {
+            object-position: -20vh;
+        }
+        #FridgeImg {
+            object-position: -20vh;
+        }
+        #PoolImg {
+        object-position: -28vh;
+    }
+        #PoolShower{
+        object-position: -30vh;
+    }
+        #PoolHouse{
+        object-position: -28vh;
+        }
+        #ProjectorPoolArea {
+        object-position: -24vh;
+    }
+
+      .row:nth-child(even) .content .description {
+      }
+
+        .image {
+            width: 28vw;
+          height: 42vw;
+        }
+
+        .home-button {
+          width: 9vw;
+        height: 9vw;
+        }
+    }
