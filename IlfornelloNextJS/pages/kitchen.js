@@ -21,7 +21,7 @@ export default function App() {
   <div class="container">
     <div class="row">
       <div class="content">
-        <video class="image" autoplay loop muted>
+        <video class="image" autoplay loop muted controls>
           <source src="KitchenImages/KitchenVid.mp4" type="video/mp4"></source>
           Your browser does not support the video tag.
         </video>
